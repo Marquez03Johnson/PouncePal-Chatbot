@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PouncePal Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="chatbot_favicon.ico">
+</head>
+<body>
+    <div class="main-container">
+        
+        <!-- Title Area -->
+        <div class="title-area">
+            <h1>PouncePal Chatbot</h1>
+        </div>
+        
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <ul class="sidebar-links">
+                <li><a href="https://pin.gsu.edu/" id="mainpage" target="_blank">Main Page</a></li>
+                <li><hr></li>
+                <li><a href="https://pin.gsu.edu/events" id="events" target="_blank">Events</a></li>
+                <li><hr></li> 
+                <li><a href="https://pin.gsu.edu/organizations" id="organizations" target="_blank">Organizations</a></li>
+                <li><hr></li> 
+                <li><a href="https://pin.gsu.edu/news" id="news" target="_blank">News</a></li>
+                <li><hr></li>
+                <li><a href="https://pin.gsu.edu/forms" id="forms" target="_blank">Forms</a></li>
+                <li><hr></li> 
+                <li><a href="https://pin.gsu.edu/service-opportunities" id="opportunities" target="_blank">Service Opportunities</a></li>
+            </ul>
+        </div>
+
+        <!-- Chat Container Section -->
+        <div class="chat-container">
+            <div id="messages" class="messages"></div>
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="message-input" placeholder="Type your message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

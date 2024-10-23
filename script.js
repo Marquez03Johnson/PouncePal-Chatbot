@@ -1,4 +1,10 @@
 // Get the chat form, message input, and messages display area from the DOM
+require('dotenv').config();
+const { OpenAI } = require('openai');
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY, // Use the environment variable
+});
 const chatForm = document.getElementById('chat-form');
 const messageInput = document.getElementById('message-input');
 const messagesDiv = document.getElementById('messages');
@@ -122,3 +128,4 @@ chatForm.addEventListener('submit', async (event) => {
         console.error('Error message:', error.message); // Log the specific error message
     }
 });
+

@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #A9A9A9; /* Dark silver background */
-    color: white; /* White text */
+    color: black; /* Changed to black for better visibility on light background */
     margin: 0;
     padding: 0;
 }
@@ -11,7 +11,7 @@ body {
 .title-area {
     text-align: center;
     padding: 20px;
-    background-color: #000000; /* Black banner behind title */
+    background-color: #FFFFFF; /* Changed to white */
     border-bottom: 2px solid #333; /* Subtle darker border */
 }
 
@@ -25,7 +25,7 @@ body {
 .sidebar {
     width: 100%;
     padding: 15px;
-    background-color: #3D3D3D; /* Darker sidebar */
+    background-color: #E0E0E0; /* Lighter grey for sidebar */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -70,7 +70,7 @@ body {
     max-width: 100%;
     margin: 20px;
     border: 1px solid #000; /* Visible black outline */
-    background: #000; /* Black background */
+    background: #FFFFFF; /* Changed to white background */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@ body {
     padding: 10px;
     border-bottom: 1px solid #333; /* Visible bottom border */
     flex: 1;
-    color: white; /* White text */
+    color: black; /* Changed to black for visibility */
 }
 
 /* User and Assistant Messages */
@@ -94,7 +94,7 @@ body {
 }
 
 .assistant .message-bubble {
-    background-color: #EBEBEB;
+    background-color: #EBEBEB; /* Grey bubble */
     color: black;
 }
 
@@ -102,7 +102,7 @@ body {
 .chat-form {
     display: flex;
     padding: 10px;
-    background-color: #000; /* Black background for form */
+    background-color: #F0F0F0; /* Changed to light grey */
 }
 
 /* Input Field */
@@ -111,8 +111,8 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    color: white; /* White text */
-    background-color: #222; /* Dark input field background */
+    color: black; /* Changed to black for better visibility */
+    background-color: #FFFFFF; /* Light input field background */
 }
 
 .chat-form input::placeholder {
@@ -124,7 +124,7 @@ body {
     padding: 10px;
     margin-left: 5px;
     border: none;
-    background-color: #000; /* Black button */
+    background-color: #F0F0F0; /* Changed to light grey */
     color: royalblue; /* Royal blue text */
     border-radius: 5px;
     cursor: pointer;

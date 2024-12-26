@@ -5,22 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PouncePal Chatbot</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="chatbot_favicon.ico">
 </head>
 <body>
+    <div class="header">
+        <div class="title">PouncePal Chatbot</div>
+    </div>
+    <p class="banner">GSU / <span>PouncePal Chatbot</span></p>
     <div class="main-container">
-        
-        <!-- Title Area -->
-        <div class="title-area">
-            <h1>PouncePal Chatbot</h1>
-        </div>
-        
-        <!-- Sidebar Section -->
         <div class="sidebar">
+            <div class="sidebar-title">Panther Involvement Network</div>
             <ul class="sidebar-links">
-                <li><a href="https://pin.gsu.edu/" id="mainpage" target="_blank">Main Page</a></li>
-                <li><hr></li>
-                <li><a href="https://pin.gsu.edu/events" id="events" target="_blank">Events</a></li>
+                <li><a href="https://pin.gsu.edu/" id="mainpgage" target="_blank">PIN Main Page</a></li>
+                <li><hr></li> <!-- gray line separator -->
+                <li><a href="https://pin.gsu.edu/events" id="event" target="_blank">Event</a></li>
                 <li><hr></li> 
                 <li><a href="https://pin.gsu.edu/organizations" id="organizations" target="_blank">Organizations</a></li>
                 <li><hr></li> 
@@ -28,19 +25,19 @@
                 <li><hr></li>
                 <li><a href="https://pin.gsu.edu/forms" id="forms" target="_blank">Forms</a></li>
                 <li><hr></li> 
-                <li><a href="https://pin.gsu.edu/service-opportunities" id="opportunities" target="_blank">Service Opportunities</a></li>
+                <li><a href="https://pin.gsu.edu/service-opportunities" id="service" target="_blank">Service</a></li>
             </ul>
         </div>
-
-        <!-- Chat Container Section -->
         <div class="chat-container">
             <div id="messages" class="messages"></div>
             <form id="chat-form" class="chat-form">
                 <input type="text" id="message-input" placeholder="Type your message..." required>
                 <button type="submit">Send</button>
             </form>
+            <div class="disclaimer">
+                Pouncepal may make mistakes. Check important info.
+            </div>
         </div>
-
     </div>
     <script src="script.js"></script>
 </body>

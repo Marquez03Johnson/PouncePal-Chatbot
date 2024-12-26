@@ -1,14 +1,6 @@
-// Get the chat form, message input, and messages display area from the DOM
-require('dotenv').config();
-const { OpenAI } = require('openai');
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, // Use the environment variable
-});
 const chatForm = document.getElementById('chat-form');
 const messageInput = document.getElementById('message-input');
 const messagesDiv = document.getElementById('messages');
-
 // Variable to hold the typing indicator message
 let typingMessage = null; 
 
@@ -16,7 +8,6 @@ let typingMessage = null;
 function appendMessage(content, role) {
     // Create a new div element for the message
     const messageElement = document.createElement('div');
-    
     // Set the class of the message element based on who sent the message (user or assistant)
     messageElement.className = role;
 

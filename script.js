@@ -89,7 +89,7 @@ chatForm.addEventListener('submit', async (event) => {
 
     // Send the user's message to the server
     try {
-        const response = await fetch('https://pouncepal-chatbot.onrender.com', {
+        const response = await fetch('https://pouncepal-chatbot.onrender.com/backend/new', {
             method: 'POST', // Use POST method to send data
             headers: {
                 'Content-Type': 'application/json', // Specify that we're sending JSON data

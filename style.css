@@ -121,7 +121,7 @@ body {
 
 .user .message-bubble {
     display: inline-block;
-    background-color: #FFEC99; /* user message bubble color */
+    background-color: #0066FF; /* user message bubble color */
     color: black; /* text color for user message */
     padding: 10px;
     border-radius: 15px; /* rounded corners for message bubble */

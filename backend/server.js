@@ -21,12 +21,18 @@ app.post('/backend/new', async (req, res) => {
         }
         
         const userMessage = req.body.content; //setting variable to user input
+        // Check if a thread already exists for the assistant
+        let threadID = req.body.threadId || null;
+        // If there's no existing thread create a new one
+        if (!threadId) {
+            const threadResponse = await openai.beta.threads.create();
+            const threadId = threadResponse.id;
 
-        // create a thread
-        const threadResponse = await openai.beta.threads.create();
-        const threadId = threadResponse.id;
+            // Store the threadId for future reference in threadStore (or a DB)
+            threadStore[threadId] = [];
+        }
         
-        // create a message in the existing thread with the user's input
+        // add the user message to the conversation thread
         await openai.beta.threads.messages.create(threadId, {
           role: "user",
           content: userMessage,
@@ -47,13 +53,12 @@ app.post('/backend/new', async (req, res) => {
         // display the assistant's response
         const messagesResponse = await openai.beta.threads.messages.list(threadId);
         const assistantResponses = messagesResponse.data.filter(msg => msg.role === 'assistant');
-        const response = assistantResponses.map(msg => 
-          msg.content
-            .filter(contentItem => contentItem.type === 'text')
-            .map(textContent => textContent.text.value)
+        const response = assistantResponses
+            .map(msg => msg.content)
             .join('\n')
-        ).join('\n');
-
+        // store the response in the thread store
+        threadStore[threadId].push({ role: 'assistant', content: response });
+        // send the assistant's response back to the client
         res.json({ response });
 
         } catch (error) {
@@ -61,7 +66,7 @@ app.post('/backend/new', async (req, res) => {
             res.status(500).json({ error: 'internal server error', details: error.message });
         }
 });
-
+ // Endpoint to retrieve the status of specific run in a specific thread
 app.get('/backend/threads/:threadId/runs/:runId', async (req, res) => { 
     const { threadId, runId } = req.params; 
     try {

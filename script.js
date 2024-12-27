@@ -10,18 +10,14 @@ function appendMessage(content, role) {
     const messageElement = document.createElement('div');
     // Set the class of the message element based on who sent the message (user or assistant)
     messageElement.className = role;
-
     // Create a bubble for the message text
     const bubbleElement = document.createElement('div');
     bubbleElement.className = 'message-bubble'; // Class for styling the message bubble
     bubbleElement.textContent = content; // Set the text inside the bubble
-
     // Append the bubble to the message element
     messageElement.appendChild(bubbleElement);
-    
     // Add the message element to the messages display area
     messagesDiv.appendChild(messageElement);
-    
     // Scroll to the bottom to show the latest message
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
@@ -30,16 +26,12 @@ function appendMessage(content, role) {
 function showTypingIndicator() {
     // Create a new div for the typing message
     typingMessage = document.createElement('div');
-    
     // Set the class for styling the typing indicator
     typingMessage.className = 'assistant typing';
-    
     // Set the text for the typing indicator
     typingMessage.textContent = 'PouncePal is typing...';
-    
     // Add the typing indicator to the messages display area
     messagesDiv.appendChild(typingMessage);
-    
     // Keep scrolling down to show the typing indicator
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
